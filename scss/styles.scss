@@ -1,0 +1,130 @@
+@import "reset";
+@import "variables";
+@import "placeholders";
+@import "mixins";
+
+header{
+    @include w-h(100%, 50px);
+    div{
+        @include w-h(400px, 50px);
+        @include go-flex(row, space-between);
+        margin: 10px 5px 5px 138px;
+    }
+    p{
+        font-size: $md-font-size;
+        font-weight: $primary-font-weight;
+    }
+}
+main {
+    @include go-flex(row, space-between);
+    width: 1200px;
+    margin-left: 138px;
+  
+    .widget {
+      @include go-flex(column);
+      @include w-h(360px, 360px);
+      background-color: #FFFFFF; 
+      border-radius: 10px;
+      transition: all 0.7s linear;
+  
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+  
+      .bg-image {
+        @include w-h(100%, 180px);
+        // @extend %center-element;
+        padding-top: 30px;
+        padding-left: 40px;
+        background-image: url(../img/3.png);
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        p {
+          color: $secondary-color;
+          font-size: $lg-font-size;
+        }
+      }
+
+      .second{
+        background-image: url(../img/2.png) !important;
+      }
+
+      .third{
+        background-image: url(../img/1.png) !important;
+      }
+  
+  
+      .description {
+        @include w-h(100%, 180px);
+        padding-top: 70px;
+        padding-left: 40px;
+  
+        p {
+          color: $primary-color;
+          font-size: $sm-font-size;
+          width: 240px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  H1{
+    font-size: 24px;
+    font-weight: $primary-font-weight;
+    display: block;
+    margin: 40px 20px 50px 138px;
+  }
+
+  section{
+    @include go-flex(row, space-between, space-between, wrap);
+    @include w-h(1200px, 960px);
+    margin-left: 138px;
+    .left-side{
+      @include go-flex(column, center, center, wrap);
+      @include w-h(760px, 960px);
+      .img{
+        @include w-h(758px, 430px);
+        margin: 10px;
+        border-radius: 10px;
+        background-image: url(../img/ggb.png);
+        background-size: cover;
+        @extend %center-element;
+        p {
+          color: $secondary-color;
+          font-size: $lg-font-size;
+        }
+      }
+    }
+    .right-side{
+      @include go-flex(row, space-between, space-around, wrap);
+      @include w-h(350px, 960px);
+      img{
+        @include w-h(362px, 212px);
+        margin: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  footer{
+    @include w-h(100%, 201px);
+    @include go-flex(row, space-around);
+    background-color: #243043;
+    div{
+      @include w-h(50px, 100px);
+      @include go-flex(row, space-between, space-around, wrap);
+      p{
+        color: $primary-color;
+      }
+    }
+    p{
+      color: $secondary-color;
+      font-size: $md-font-size;
+    }
+    img{
+      @include w-h(38px, 40px);
+    }
+  }
