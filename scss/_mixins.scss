@@ -3,6 +3,16 @@
     height: $height;
 }
 
+@mixin max-w-h($width, $height) {
+    max-width: $width;
+    max-height: $height;
+}
+
+@mixin min-w-h($min-width, $min-height) {
+     min-width: $min-width; 
+     min-height: $min-height; 
+}
+
 @mixin go-flex($dir: row, $justify: center, $align: center, $wrap: nowrap) {
     display: flex;
     flex-direction: $dir;

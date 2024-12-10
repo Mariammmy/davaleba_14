@@ -17,7 +17,7 @@ header{
 }
 main {
     @include go-flex(row, space-between);
-    width: 1200px;
+    max-width: 1200px;
     margin-left: 138px;
   
     .widget {
@@ -87,6 +87,7 @@ main {
       @include w-h(760px, 960px);
       .img{
         @include w-h(758px, 430px);
+        
         margin: 10px;
         border-radius: 10px;
         background-image: url(../img/ggb.png);
@@ -127,4 +128,6 @@ main {
     img{
       @include w-h(38px, 40px);
     }
+    
   }
+  @import "media";

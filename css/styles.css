@@ -172,7 +172,7 @@ main {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
+  max-width: 1200px;
   margin-left: 138px;
 }
 main .widget {
@@ -307,4 +307,33 @@ footer p {
 footer img {
   width: 38px;
   height: 40px;
+}
+
+@media (max-width: 1200px) {
+  main {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    gap: 20px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    margin-left: 0;
+    width: 500px;
+  }
+}
+@media (max-width: 750px) {
+  section .img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+  }
 }/*# sourceMappingURL=styles.css.map */
